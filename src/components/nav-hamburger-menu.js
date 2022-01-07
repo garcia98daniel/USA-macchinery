@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import closeIcon from "../Icons/closeIcon.svg";
+import {ReactComponent as closeIcon} from "../Icons/closeIcon.svg";
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;

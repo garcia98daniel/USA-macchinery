@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
-import arowRightIcon from "../Icons/arowRightIcon.svg"
+import {ReactComponent as arowRightIcon} from "../Icons/arowRightIcon.svg"
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
