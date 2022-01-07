@@ -5,11 +5,13 @@ const ContactButton = () => {
   return (
     <button
       css={css`
+        
         font-weight: 800;
         color: var(--gray-primary);
         background-color: var(--orange-primary);
         max-width: 14rem;
-        padding: 1rem;
+        padding: 1rem 2rem;
+        padding-top: 1.1rem;
         display: flex;
         justify-content: center;
         align-items: center;

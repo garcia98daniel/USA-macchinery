@@ -16,7 +16,6 @@ const NavLink = styled.a`
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
-  font-family: "PT Sans", sans-serif;
   text-decoration: none;
   padding: 1rem;
   margin-right: 1rem;

@@ -21,13 +21,26 @@ const ItemService = styled.div`
   p {
     font-size: 1.7rem;
     line-height: 1;
-    width: 80%;
-    font-weight: 600;
-    color: var(--seconday-gray);
+    width: 90%;
+    color: var(--gray-primary);
   }
   .service-img {
     object-fit: cover;
     margin-bottom: 1rem;
+  }
+
+  .service-icon{
+    border-radius: 50%;
+    background-color: var(--orange-primary);
+    width: 7rem;
+    height: 7rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 140px;
+    right: 0px;
   }
 `
 
@@ -46,24 +59,8 @@ const ServiceItem = ({
         {title} <br /> {titlebr1}{" "}
       </h3>
       <img className="service-img" width={210} height={210} src={imgSrc} />
-      <div
-        css={css`
-          width: 50rem;
-          border-radius: 50%;
-          background-color: var(--orange-primary);
-          width: 5rem;
-          height: 5rem;
-          padding: 1rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          bottom: 120px;
-          right: 0px;
-          transform: scale(1.2);
-        `}
-      >
-        <img src={icon} />
+      <div className="service-icon" >
+      <img  src={icon} />
       </div>
       <p>{description}</p>
     </ItemService>

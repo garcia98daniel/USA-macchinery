@@ -1,0 +1,13 @@
+@import "../css/typography.css";
+
+body,p,a {
+    font-family: "David regular";
+  }
+ 
+  h1,
+  h2 {
+    font-family: "Kostic";
+  }
+  h3 {
+    font-family: "David bold";
+  }

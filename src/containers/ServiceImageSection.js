@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "@emotion/styled"
@@ -14,6 +14,10 @@ const ImageBackground = styled(BackgroundImage)`
     height: 700px;
     margin-bottom: 1rem;
   }
+  :after{
+    filter: brightness(60%);
+  }
+  
 `
 
 const ServiceImageSection = () => {
@@ -36,7 +40,6 @@ const ServiceImageSection = () => {
     flex: 1;
     align-items: center;
     justify-content: center;
-
     h1 {
       font-size: var(--lg);
       margin: 0;
@@ -49,13 +52,19 @@ const ServiceImageSection = () => {
         font-size: 10rem;
       }
     }
-    }
+    
   `
+  const bgRef = useRef();
   return (
     <ServiceSection>
-      <ImageBackground fadeIn="soft" tag="section" fluid={image.sharp.fluid}>
+      <ImageBackground 
+      ref={bgRef}
+      onStartLoad={() => bgRef.current.selfRef.classList.toggle("loading")}
+      onLoad={() => bgRef.current.selfRef.classList.toggle("loading")} 
+      tag="section" 
+      fluid={image.sharp.fluid}>
         <TextoImagen>
-          <h1>
+          <h1 >
             Servicio <br /> 24/7
           </h1>
         </TextoImagen>

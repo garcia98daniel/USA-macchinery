@@ -7,6 +7,7 @@ import ServiceImageSection from "../containers/ServiceImageSection"
 import WeSection from "../containers/WeSection"
 import ExperienceSection from "../containers/ExperienceSection"
 import OurClients from "../containers/OurClients"
+import "../fonts/david-regular.otf"
 
 const IndexPage = () => {
   return (

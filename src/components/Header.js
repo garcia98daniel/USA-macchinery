@@ -21,7 +21,7 @@ const ContactDiv = styled.div`
   background-color: var(--orange-primary);
   height: 3.4rem;
   transform: scale(0.9);
-  padding: 0.8rem 1.8rem;
+  padding: 0.8rem 3rem;
   margin: auto 0;
   i {
     margin-right: 1rem;
@@ -30,15 +30,16 @@ const ContactDiv = styled.div`
 const Img = styled.img`
   height: 3rem;
   margin: auto 0;
+  cursor:pointer;
   @media (min-width: 768px) {
     display: none;
   }
 `
 
 const Header = () => {
-  const mostrarMenu = () => {
+  const showMenu = () => {
     const menu = document.querySelector(".hamburger-menu")
-    menu.style.display = "flex"
+    menu.style.top = "0";
   }
   return (
     <header
@@ -75,7 +76,7 @@ const Header = () => {
             <span>81 2032 1618</span>
           </b>
         </ContactDiv>
-        <Img onClick={mostrarMenu} src={menuLogo} alt="menu-logo" />
+        <Img onClick={() => showMenu()} src={menuLogo} alt="menu-logo" />
       </div>
     </header>
   )
