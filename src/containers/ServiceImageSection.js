@@ -65,7 +65,7 @@ const ServiceImageSection = () => {
       fluid={image.sharp.fluid}>
         <TextoImagen>
           <h1 >
-            Servicio <br /> 24/7
+            Servicio <br /> 24 / 7
           </h1>
         </TextoImagen>
       </ImageBackground>

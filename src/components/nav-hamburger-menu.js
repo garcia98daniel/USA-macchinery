@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-
+import closeIcon from "../Icons/closeIcon.svg";
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
@@ -15,12 +15,12 @@ const Nav = styled.nav`
   justify-content: center;
   transition: all 0.3s ease-out;
 
-  i {
+  i,img {
     color: white;
-    font-size: 3.5rem;
+    width: 30px;
     position: absolute;
-    top: 4rem;
-    right: 2rem;
+    top: 2rem;
+    right: 1rem;
     cursor:pointer;
   }
 `
@@ -28,7 +28,7 @@ const NavLink = styled.a`
   font-size: 4rem;
   color: var(--white);
   text-decoration: none;
-  line-height: 1;
+  line-height: 1.1;
 `
 
 const HamburgerMenu = () => {
@@ -38,7 +38,9 @@ const HamburgerMenu = () => {
   }
   return (
     <Nav className="hamburger-menu">
-      <i onClick={() => hideMenu()} className="fas fa-times"></i>
+      <i onClick={() => hideMenu()}>
+        <img src={closeIcon} alt="close.png" />
+      </i>
       <NavLink onClick={() => hideMenu()} href="#inicio" activeClassName="pagina-actual">
         Inicio
       </NavLink>

@@ -1,12 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
-
+import downArow from "../Icons/arowRegular.png"
 const ConoceMasbtn = styled.div`
   display: flex;
   align-items: center;
   border-radius: 3rem;
   border: solid 1px var(--gray-primary);
   padding: 0.1rem 0.5rem;
+  padding-top: 0.2rem;
   width: fit-content;
   align-items: center;
   justify-content: space-around;
@@ -22,7 +23,14 @@ const ConoceMasbtn = styled.div`
     font-size:1.2rem;
   }
   i{
-    margin:0 5px;
+    margin-top: -6px;
+  }
+  i img{
+    margin-right: 7px;
+    width: 14px;
+    height: auto;
+    color: var(--gray-primary);
+    filter: brightness(10%);
   }
 
   @media (min-width: 768px) {
@@ -37,7 +45,9 @@ const ShowMoreBtn = () => {
   return (
     <ConoceMasbtn>
       <p>CONOCE MÁS</p>
-      <i className="fas fa-chevron-down"></i>
+      <i >
+        <img src={downArow} alt="icon.png"/>
+      </i>
     </ConoceMasbtn>
   )
 }

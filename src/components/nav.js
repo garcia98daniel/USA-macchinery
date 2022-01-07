@@ -34,7 +34,7 @@ const Navegacion = () => {
         Inicio
       </NavLink>
       <NavLink href="#servicios" activeClassName="pagina-actual">
-        servicios
+        Servicios
       </NavLink>
       <NavLink href="#nosotros" activeClassName="pagina-actual">
         Nosotros

@@ -12,18 +12,22 @@ const ServiceSection = styled.section`
 
 const ImageBackground = styled(BackgroundImage)`
   height: 480px;
-  width: 110%;
+  width: 100%;
   max-width: 680px;
   margin: 0 auto;
   transform: rotate(8deg);
+  
+  :after{
+    width: 110% !important;
+  }
   @media (min-width: 768px) {
-    width: 110%;
+    width: 100%;
     height: 500px;
     margin-bottom: 0.5rem;
     width: 100%;
-  }
-  :after{
-    filter: brightness(85%);
+    :after{
+      filter: brightness(85%);
+    }
   }
 `
 
@@ -254,7 +258,7 @@ const ForkLiftImage = () => {
       onLoad={() => bgHeroRef.current.selfRef.classList.toggle("loading")} 
       fluid={image.sharp.fluid}>
         <TextoImagen>
-          <div>
+          <div >
             <h1 className="animation1">L</h1>
             <h1 className="animation2">i</h1>
             <h1 className="animation3">f</h1>

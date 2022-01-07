@@ -21,7 +21,7 @@ const ItemService = styled.div`
   p {
     font-size: 1.7rem;
     line-height: 1;
-    width: 90%;
+    width: 100%;
     color: var(--gray-primary);
   }
   .service-img {

@@ -1,23 +1,22 @@
 import React from "react"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
-
+import arowRightIcon from "../Icons/arowRightIcon.svg"
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   max-width: 1200px;
 
-  i {
-    font-size: 2.6rem;
-    color: var(--white);
+  label,img {
+    width: 25px;
   }
   input {
     height: inherit;
     width: -webkit-fill-available;
     background-color: var(--gray-primary);
     border: none;
-    border-bottom: 2px solid var(--white);
+    border-bottom: 1px solid var(--white);
     outline: none;
     color:white;
   }
@@ -32,6 +31,9 @@ const FooterContainer = styled.div`
     font-size: 1.6rem;
     margin: 1rem 0;
     font-weight: bold;
+  }
+  .arrow{
+    display:none;
   }
   @media (min-width: 768px) {
     margin-left: 40%;
@@ -72,7 +74,7 @@ const Footer = () => {
         >
           Compártenos tu correo
         </span>
-        <div
+        <form action="mailto:sofia@happer.mx?subject=Suscrito a ustedes" method="post" enctype="text/plain"
           css={css`
             height: 5rem;
             border-bottom: 3px solid var(--white);
@@ -85,9 +87,12 @@ const Footer = () => {
             }
           `}
         >
-          <input type="text" />
-          <i className="fas fa-arrow-right"></i>
-        </div>
+          <input type="text" name="mail"/>
+          <label for="arrow">
+            <img src={arowRightIcon} alt/>
+          </label >
+          <input className="arrow" id="arrow" type="submit" value="Send" ></input>
+        </form>
         <div
           css={css`
             display: grid;
