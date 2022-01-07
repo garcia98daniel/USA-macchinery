@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import {ReactComponent as closeIcon} from "../Icons/closeIcon.svg";
+import CloseIcon from "../Icons/closeIcon.inline.svg";
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
@@ -15,13 +15,18 @@ const Nav = styled.nav`
   justify-content: center;
   transition: all 0.3s ease-out;
 
-  i,img {
+  .closeIcon {
     color: white;
     width: 30px;
     position: absolute;
     top: 2rem;
     right: 1rem;
     cursor:pointer;
+    fill: none;
+    stroke: #ffffff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
   }
 `
 const NavLink = styled.a`
@@ -39,7 +44,7 @@ const HamburgerMenu = () => {
   return (
     <Nav className="hamburger-menu">
       <i onClick={() => hideMenu()}>
-        <img src={closeIcon} alt="close.png" />
+        <CloseIcon  className="closeIcon"/>
       </i>
       <NavLink onClick={() => hideMenu()} href="#inicio" activeClassName="pagina-actual">
         Inicio

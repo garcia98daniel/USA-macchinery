@@ -42,6 +42,14 @@ const ItemService = styled.div`
     bottom: 140px;
     right: 0px;
   }
+
+  .e{
+    width:40px;
+    color black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const ServiceItem = ({
@@ -49,7 +57,7 @@ const ServiceItem = ({
   title,
   titlebr1,
   description,
-  icon,
+  children,
   number,
 }) => {
   return (
@@ -60,7 +68,9 @@ const ServiceItem = ({
       </h3>
       <img className="service-img" width={210} height={210} src={imgSrc} />
       <div className="service-icon" >
-      <img  src={icon} />
+      <i className="e">
+        {children}
+      </i>
       </div>
       <p>{description}</p>
     </ItemService>

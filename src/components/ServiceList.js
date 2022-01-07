@@ -2,10 +2,10 @@ import React from "react"
 import styled from "@emotion/styled"
 import ServiceItem from "../components/ServiceItem"
 
-import {ReactComponent as truckIcon} from "../icons/truck.svg"
-import {ReactComponent as toolsIcon} from "../icons/tools.svg"
-import {ReactComponent as threadIcon} from "../icons/thread.svg"
-import {ReactComponent as bateryIcon} from "../icons/batery.svg"
+import TruckIcon from "../icons/truck.inline.svg"
+import ToolsIcon from "../icons/tools.inline.svg"
+import ThreadIcon from "../icons/thread.inline.svg"
+import BateryIcon from "../icons/batery.inline.svg"
 
 import image1 from "../images/man-working.jpg"
 import image2 from "../images/bar.png"
@@ -53,32 +53,36 @@ const ServiceList = () => {
         title={title1}
         titlebr1={titlebr1}
         description={description1}
-        icon={truckIcon}
-      />
+      >
+        {<TruckIcon />}
+      </ServiceItem>
       <ServiceItem
         number={"02"}
         imgSrc={image2}
         title={title2}
         titlebr1={titlebr2}
         description={description2}
-        icon={threadIcon}
-      />
+      >
+        {<ThreadIcon />}
+      </ServiceItem>
       <ServiceItem
         number={"03"}
         imgSrc={image3}
         title={title3}
         titlebr1={titlebr3}
         description={description3}
-        icon={bateryIcon}
-      />
+      >
+        {<BateryIcon />}
+      </ServiceItem>
       <ServiceItem
         number={"04"}
         imgSrc={image4}
         title={title4}
         titlebr1={titlebr4}
         description={description4}
-        icon={toolsIcon}
-      />
+      >
+        {<ToolsIcon />}
+      </ServiceItem>
     </ListServices>
   )
 }
